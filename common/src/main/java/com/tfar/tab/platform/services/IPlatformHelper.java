@@ -1,5 +1,7 @@
 package com.tfar.tab.platform.services;
 
+import com.tfar.tab.platform.MLConfig;
+
 public interface IPlatformHelper {
 
     /**
@@ -33,4 +35,7 @@ public interface IPlatformHelper {
 
         return isDevelopmentEnvironment() ? "development" : "production";
     }
+
+    MLConfig getConfig();
+
 }
