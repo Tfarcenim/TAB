@@ -1,4 +1,4 @@
-package com.example.examplemod.platform.services;
+package com.tfar.tab.platform.services;
 
 public interface IPlatformHelper {
 
