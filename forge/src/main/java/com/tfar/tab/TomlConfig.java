@@ -19,11 +19,14 @@ public class TomlConfig implements MLConfig {
 
     public static class Server {
         public static ForgeConfigSpec.BooleanValue enable_belowname;
-
+        public static ForgeConfigSpec.ConfigValue<String> belowname_number;
+        public static ForgeConfigSpec.ConfigValue<String> belowname_text;
 
         public Server(ForgeConfigSpec.Builder builder) {
-            builder.push("general");
-            enable_belowname = builder.define("enable_belowname",true);
+            builder.push(TABProperties.BELOWNAME);
+            enable_belowname = builder.define("enable",true);
+            belowname_number = builder.define("number","%health%");
+            belowname_text = builder.define("text","&cHealth");
             builder.pop();
         }
     }
